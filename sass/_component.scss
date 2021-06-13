@@ -1,0 +1,348 @@
+/////////////////////////////////////////
+// Logo
+
+.logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+   
+}
+
+/////////////////////////////////////////
+// Search
+
+.search {
+    // background-color: orangered;
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        flex: 0 0 90%;
+        margin-right: -3.25rem;
+        background-color: var(--color-grey-light-2);
+        transition: ease-out .2s;
+        border-radius: 10rem;
+        padding: 0.7rem 2rem;
+        color: inherit;
+        border: none;
+        
+        &::-webkit-input-placeholder {
+            color: var(--color-grey-light-4);
+            font-weight: 100;
+        }
+
+        &:focus{
+            flex:0 0 100%;
+            background-color: var(--color-grey-light-3);
+            outline: none;
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
+    }
+
+    
+
+    &__button {
+        // outline: none;
+        background-color: var(--color-grey-light-2);
+       border: none;
+       &:focus {
+           outline: none;
+       }
+       &:active {
+           transform: translateY(2px);
+       }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-dark-3);
+    }
+}
+
+/////////////////////////////////////////
+// User Navigation
+
+.user-nav {
+
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    
+
+    & > * {
+        padding: 0 2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+           
+           
+        }
+    }
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__icon-box {
+        position: relative;
+        // background-color: red;
+    }
+
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--color-grey-dark-1);
+    }
+
+    &__notification {
+        position: absolute;
+        font-size: 1rem;
+        top: 1.5rem;
+        right: 1rem;
+        // padding: .4rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        background-color: var(--color-primary);
+        color: #fff;
+        border-radius: 100px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // top: ;
+        // right: -0.1rem;
+    }
+
+    &__user {
+
+    }
+
+    &__user-image {
+        height: 3.75rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    &__user-name {
+
+    }
+}
+
+/////////////////////////////////////////
+// Side Nav 
+.side-nav {
+    list-style-type: none;
+    margin-top: 2rem;
+    &__item {
+        position: relative;
+        // padding: 1rem 2rem;
+        // background-color: darkblue;
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+    }
+
+    // &__link::before {
+    //     content: "";
+    //     height: 100%;
+    //     width: 100%;
+    //     background-color: var(--color-primary);
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: -1;
+    // }
+
+    &__link:link,&__link:visited {
+        text-decoration: none;
+        color: var(--color-grey-light-1);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 1.5rem 2.5rem;
+        display: flex;
+        position: relative;
+        z-index: 10;
+        align-items: center;
+       
+        // background-color: darkblue;
+       
+    }
+
+    &__link:hover,&__link--1 {
+        background-color: var(--color-primary);
+    }
+
+    &__link:active {
+        background-color: var(--color-primary-light);
+    }
+
+    &__icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: currentColor;
+        margin-right: .7rem;
+    }
+}
+
+
+
+
+
+/////////////////////////////////////////
+// Legal Text 
+
+.legal {
+    color: var(--color-grey-light-4);
+    font-size: 1.3rem;
+    padding: 2rem;
+    text-align: center;
+
+}
+
+/////////////////////////////////////////
+// Hotel Gallery
+.gallery {
+    display: flex;
+    &__item {
+
+    }
+    
+    &__item-photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+/////////////////////////////////////////
+// Hotel Overview
+
+.overview {
+    display: flex;
+    border-bottom: var(--line);
+    align-items: center;
+    background-color: #fff;
+    // justify-content: space-between;
+    &__heading {
+        padding: 1.5rem 3rem;
+        font-size: 2.25rem;
+        font-weight: 300;
+        letter-spacing: 1;
+
+        // color: var(--color-grey-dark-2);
+        text-transform: uppercase;
+    }
+
+    &__stars {
+        // flex: 1;
+        margin-right: auto;
+        display: flex;
+
+    }
+
+    &__stars-icon,&__location-icon {
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var(--color-primary);
+        // line-height: 0;
+        // font-size: 0;
+    }
+
+    &__location {
+        display: flex;
+        font-size: 1.2rem;
+    }
+
+    &__location-icon {
+        margin-right: .5rem;
+    }
+
+    &__rating {
+        margin-left: 2rem;
+        background-color: var(--color-primary);
+        color: #fff;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1.8rem ;
+    }
+
+    &__rating-average {
+        font-size: 2.25rem;
+        font-weight: 300;
+        margin-bottom: -0.3rem;
+
+    }
+
+    &__rating-count {
+        text-transform: uppercase;
+    }
+}
+
+/////////////////////////////////////////
+// Button Inline
+
+.btn-inline {
+    border:none;
+    font-size: inherit;
+    color: var(--color-primary);
+    border-bottom: 1px solid currentColor;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+        animation: pulsesate 1s infinite;
+    }
+}
+
+/////////////////////////////////////////
+// Recommend
+
+.recommend {
+    &__count {
+
+    }
+
+    &__freinds {
+
+    }
+
+    &__friend-photo {
+
+    }
+}
+
+/////////////////////////////////////////
+// List
+
+.list {
+
+    &__item {
+
+    }
+}
+
+/////////////////////////////////////////
+// Paragraph
+.paragraph {
+    
+}
+
+
+
+
+
